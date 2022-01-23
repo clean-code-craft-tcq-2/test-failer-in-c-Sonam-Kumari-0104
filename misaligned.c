@@ -5,7 +5,7 @@ int printColorMap() {
     int i = 0, j = 0;
     for(i = 0; i < 5; i++) {
         for(j = 0; j < 5; j++) {
-            printonConsole(i, j);           
+            printOnConsole(i, j);           
         }
     }
     return i * j;
