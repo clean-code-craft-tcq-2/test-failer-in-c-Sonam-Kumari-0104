@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <assert.h>
 
+void printOnConsole(int majorColorIndex, int minorColorIndex);
+
 int printColorMap() {
     int i = 0, j = 0;
     for(i = 0; i < 5; i++) {
