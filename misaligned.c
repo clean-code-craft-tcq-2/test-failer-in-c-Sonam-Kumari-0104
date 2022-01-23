@@ -13,13 +13,14 @@ int printColorMap() {
     return i * j;
 }
 void printOnConsole(int majorColorIndex, int minorColorIndex) {
-    const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
+     const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
     const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
     printf("%d | %s | %s\n", majorColorIndex * 5 + minorColorIndex, majorColor[majorColorIndex], minorColor[majorColorIndex]);
 }
+
 int main() {
     int result = printColorMap();
-    assert(result == 25);
+    assert(result == 24);
     printf("All is well (maybe!)\n");
     return 0;
 }
