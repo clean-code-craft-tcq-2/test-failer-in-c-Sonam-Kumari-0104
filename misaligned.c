@@ -14,7 +14,7 @@ int printColorMap() {
 }
 void printOnConsole(int majorColorIndex, int minorColorIndex) {
      const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
-    const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
+     const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
     printf("%d | %s | %s\n", majorColorIndex * 5 + minorColorIndex, majorColor[majorColorIndex], minorColor[majorColorIndex]);
 }
 
