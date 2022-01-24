@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include <assert.h>
 
-void printOnConsole(int majorColorIndex, int minorColorIndex);
+void printOnConsole(int majorColorIndex, int minorColorIndex) {
+     const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
+     const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
+    printf("%d | %s | %s\n", majorColorIndex * 5 + minorColorIndex, majorColor[majorColorIndex], minorColor[majorColorIndex]);
+}
 
 int printColorMap() {
     int i = 0, j = 0;
@@ -11,11 +15,6 @@ int printColorMap() {
         }
     }
     return i * j;
-}
-void printOnConsole(int majorColorIndex, int minorColorIndex) {
-     const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
-     const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
-    printf("%d | %s | %s\n", majorColorIndex * 5 + minorColorIndex, majorColor[majorColorIndex], minorColor[majorColorIndex]);
 }
 
 int main() {
