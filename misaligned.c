@@ -13,6 +13,7 @@ typedef struct {
 
 colorPair testPrintcolorMapOnConsole() {
      colorPair colorMap;
+     int i = 0, j = 0;
      for(i = 0; i < 5; i++) {
         for(j = 0; j < 5; j++) {
              colorMap.pairNumber = i * 5 + j;
@@ -40,7 +41,7 @@ int printColorMap() {
 int main() {
     int result = printColorMap();
     assert(result == 25);
-    colorPair c1[25];
+    colorPair c1;
     c1 = testPrintcolorMapOnConsole();
     assert(c1.pairNumber == 25);
     assert(strcmp(c1.majorColor[4], majorColor[4]));
