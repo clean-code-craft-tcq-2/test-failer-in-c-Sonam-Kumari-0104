@@ -18,7 +18,7 @@ colorPair testPrintcolorMapOnConsole() {
         for(j = 0; j < 5; j++) {
              colorMap.pairNumber = i * 5 + j;
              colorMap.majorColor[i * 5 + j] = majorColor[i];
-             colorMap.majorColor[i * 5 + j] = minorColor[j];
+             colorMap.minorColor[i * 5 + j] = minorColor[i];
         }
     }
     return colorMap;
@@ -43,9 +43,9 @@ int main() {
     assert(result == 25);
     colorPair c1;
     c1 = testPrintcolorMapOnConsole();
-    assert(strcmp(c1.majorColor[4], majorColor[4]));
-    assert(strcmp(c1.minorColor[4], minorColor[4]));
-    assert(c1.pairNumber == 25);
+    assert(strcmp(c1.majorColor[4], "Violet"));
+    assert(strcmp(c1.minorColor[4], "Slate"));
+    assert(c1.pairNumber == 24);
     printf("All is well (maybe!)\n");
     return 0;
 }
