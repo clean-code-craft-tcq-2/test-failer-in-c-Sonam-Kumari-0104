@@ -7,8 +7,8 @@ const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
 
 typedef struct {
      int pairNumber;
-     char majorColor[8];
-     char minorColor[8];
+     const char* majorColor[8];
+     const char* minorColor[8];
 }colorPair;
 
 colorPair testPrintcolorMapOnConsole() {
