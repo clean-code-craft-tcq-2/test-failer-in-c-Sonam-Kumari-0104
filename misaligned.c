@@ -9,7 +9,7 @@ typedef struct {
      int pairNumber;
      const char* majorColor[8];
      const char* minorColor[8];
-}colorPair;
+}colorPair[25];
 
 colorPair testPrintcolorMapOnConsole() {
      colorPair colorMap;
@@ -43,9 +43,10 @@ int main() {
     assert(result == 25);
     colorPair c1;
     c1 = testPrintcolorMapOnConsole();
-    assert(strcmp(c1.majorColor[4], "Violet"));
-    assert(strcmp(c1.minorColor[4], "Slate"));
-    assert(c1.pairNumber == 24);
+    assert(c1.pairNumber[16] == 16);
+    assert(strcmp(c1.majorColor[16], "Yellow"));
+    assert(strcmp(c1.minorColor[16], "Orange"));
+    
     printf("All is well (maybe!)\n");
     return 0;
 }
