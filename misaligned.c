@@ -14,8 +14,8 @@ typedef struct {
 colorPair testPrintcolorMapOnConsole(int pno, const char* majorCol, const char* minorCol) {
      colorPair colorMap;
      colorMap.pairNumber = pno;
-     colorMap.majorColor[pno] = majorCol;
-     colorMap.minorColor[pno] = minorCol;
+     colorMap.majorColor = majorCol;
+     colorMap.minorColor = minorCol;
     return colorMap;
 }
 
@@ -39,8 +39,8 @@ int main() {
     colorPair c1;
     c1 = testPrintcolorMapOnConsole(16, "Yellow", "Orange");
     assert(c1.pairNumber == 16);
-    assert(strcmp(c1.majorColor[16], "Yellow")==0);
-    assert(strcmp(c1.minorColor[16], "Orange")==0);    
+    assert(strcmp(c1.majorColor, "Yellow")==0);
+    assert(strcmp(c1.minorColor, "Orange")==0);    
     printf("All is well (maybe!)\n");
     return 0;
 }
