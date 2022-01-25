@@ -43,9 +43,9 @@ int main() {
     assert(result == 25);
     colorPair c1;
     c1 = testPrintcolorMapOnConsole();
-    assert(c1.pairNumber == 25);
     assert(strcmp(c1.majorColor[4], majorColor[4]));
     assert(strcmp(c1.minorColor[4], minorColor[4]));
+    assert(c1.pairNumber == 25);
     printf("All is well (maybe!)\n");
     return 0;
 }
