@@ -11,11 +11,11 @@ typedef struct {
      const char* minorColor[8];
 }colorPair;
 
-colorPair testPrintcolorMapOnConsole(int pno, const char* majorCol[8], const char* minorCol[8]) {
+colorPair testPrintcolorMapOnConsole(int pno, const char* majorCol, const char* minorCol) {
      colorPair colorMap;
      colorMap.pairNumber = pno;
-     colorMap.majorColor = majorCol;
-     colorMap.minorColor = minorCol;
+     strcpy(colorMap.majorColor, majorCol);
+     strcpy(colorMap.minorColor, minorCol);
     return colorMap;
 }
 
