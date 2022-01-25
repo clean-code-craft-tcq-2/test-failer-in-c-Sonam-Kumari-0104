@@ -35,8 +35,8 @@ int printColorMap() {
 
 int main() {
     int result = printColorMap();
-    int minorColorIdx = 3;
-    int majorColorIdx = 4;
+    int majorColorIdx = 3;
+    int minorColorIdx = 4;
     assert(result == 25);
     colorPair c1;
     c1 = testPrintcolorMapOnConsole(majorColorIdx * 5 + minorColorIdx, majorColor[majorColorIdx], minorColor[majorColorIdx]);
