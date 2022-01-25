@@ -35,12 +35,14 @@ int printColorMap() {
 
 int main() {
     int result = printColorMap();
+    int minorColorIdx = 3;
+    int majorColorIdx = 4;
     assert(result == 25);
     colorPair c1;
-    c1 = testPrintcolorMapOnConsole(16, "Yellow", "Orange");
-    assert(c1.pairNumber == 16);
+    c1 = testPrintcolorMapOnConsole(majorColorIdx * 5 + minorColorIdx, majorColor[majorColorIdx], minorColor[majorColorIdx]);
+    assert(c1.pairNumber == 19);
     assert(strcmp(c1.majorColor, "Yellow")==0);
-    assert(strcmp(c1.minorColor, "Orange")==0);    
+    assert(strcmp(c1.minorColor, "Slate")==0);    
     printf("All is well (maybe!)\n");
     return 0;
 }
