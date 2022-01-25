@@ -1,24 +1,26 @@
 #include <stdio.h>
 #include <assert.h>
+#include <string.h>
 
 const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
 const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
 
-typedef Struct {
+typedef struct {
      int pairNumber;
-     char majorColor;
-     char minorColor;
+     char majorColor[8];
+     char minorColor[8];
 }colorPair;
 
 colorPair testPrintcolorMapOnConsole() {
+     colorPair colorMap;
      for(i = 0; i < 5; i++) {
         for(j = 0; j < 5; j++) {
-             pairNumber = i * 5 + j;
-             colorPair.majorColor[i * 5 + j] = majorColor[i];
-             colorPair.majorColor[i * 5 + j] = minorColor[j];
+             colorMap.pairNumber = i * 5 + j;
+             colorMap.majorColor[i * 5 + j] = majorColor[i];
+             colorMap.majorColor[i * 5 + j] = minorColor[j];
         }
     }
-    return colorPair;
+    return colorMap;
 }
 
 void printColorMapOnConsole(int majorColorIndex, int minorColorIndex) {
@@ -29,7 +31,7 @@ int printColorMap() {
     int i = 0, j = 0;
     for(i = 0; i < 5; i++) {
         for(j = 0; j < 5; j++) {
-            printOnConsole(i, j);           
+            printColorMapOnConsole(i, j);           
         }
     }
     return i * j;
@@ -43,7 +45,6 @@ int main() {
     assert(c1.pairNumber == 25);
     assert(strcmp(c1.majorColor[4], majorColor[4]));
     assert(strcmp(c1.minorColor[4], minorColor[4]));
-    assert
     printf("All is well (maybe!)\n");
     return 0;
 }
