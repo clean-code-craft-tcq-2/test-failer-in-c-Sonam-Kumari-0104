@@ -41,7 +41,7 @@ int printColorMap() {
 int main() {
     int result = printColorMap();
     assert(result == 25);
-    colorPair c1;
+    colorPair c1[25];
     c1 = testPrintcolorMapOnConsole();
     assert(c1.pairNumber[16] == 16);
     assert(strcmp(c1.majorColor[16], "Yellow"));
