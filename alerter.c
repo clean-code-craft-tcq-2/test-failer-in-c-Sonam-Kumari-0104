@@ -17,7 +17,8 @@ int networkAlertStub(float celcius) {
     else 
     {
         return 500;
-        alertCounter += 1;
+        alertCounter++;
+        printf("%d \n", alertCounter);
     }
 }
 
