@@ -3,7 +3,7 @@
 
 #define TEMP_THRESHOLD 200
 int alertFailureCount = 0;
-int alertCounter = 0;
+static int alertCounter = 0;
 
 int networkAlertStub(float celcius) {
     printf("ALERT: Temperature is %.1f celcius.\n", celcius);
@@ -44,6 +44,7 @@ int main() {
     alertInCelcius(303.6);
     alertInCelcius(600);
     assert(alertFailureCount==alertCounter);
+    printf("%d alertCounter\n", alertCounter);
     printf("%d alerts failed.\n", alertFailureCount);
     printf("All is well (maybe!)\n");
     return 0;
