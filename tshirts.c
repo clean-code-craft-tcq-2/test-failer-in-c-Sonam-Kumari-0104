@@ -18,7 +18,7 @@ void testTshirtsSize(int sizeInCms, char sizeInChar) {
 }
 
 int main() {
-    //assert(size(37) == 'S');
+    assert(size(37) == 'S');
     testTshirtsSize(37, 'S');
     //assert(size(38) == 'S');
     testTshirtsSize(38, 'S');
