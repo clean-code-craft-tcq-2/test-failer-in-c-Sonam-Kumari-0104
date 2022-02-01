@@ -25,11 +25,3 @@ void test_tempAlertImpl(float fahrenheit) {
   assert(alertFailureCount==failureCounter);
 }
 
-int main() {
-    test_tempAlertImpl(400.5);
-    test_tempAlertImpl(303.6);
-    test_tempAlertImpl(600);
-    printf("%d alerts failed.\n", alertFailureCount);
-    printf("All is well (maybe!)\n");
-    return 0;
-}
