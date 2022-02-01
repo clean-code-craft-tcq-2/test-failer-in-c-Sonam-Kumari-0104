@@ -1,12 +1,15 @@
 #include <stdio.h>
 #include <assert.h>
 
+int alertFailureCount = 0;
+static int failureCounter = 0;
+
 float farenheitToCelcius(float farenheit) {
     float celcius = (farenheit - 32) * 5 / 9;
     return celcius;
 }
 
-void alertInCelcius(float farenheit, int (*fnPtrForNetworkAlert(float))) {
+void alertInCelcius(float farenheit, int (*fnPtrForNetworkAlert)(float)) {
     float celcius = farenheitToCelcius(farenheit);
     int returnCode = (*fnPtrForNetworkAlert)(celcius);
     if (returnCode != 200) {
@@ -19,10 +22,9 @@ void alertInCelcius(float farenheit, int (*fnPtrForNetworkAlert(float))) {
 }
 
 int main() {
-    alertInCelcius(400.5);
     test_tempAlertImpl(400.5);
-    alertInCelcius(303.6);
-    alertInCelcius(600);
+    test_tempAlertImpl(303.6);
+    test_tempAlertImpl(600);
     assert(alertFailureCount==failureCounter);
     printf("%d alerts failed.\n", alertFailureCount);
     printf("All is well (maybe!)\n");
