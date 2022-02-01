@@ -20,7 +20,7 @@ colorPair testPrintcolorMapOnConsole(int pno, const char *majorCol, const char *
 }
 
 void printColorMapOnConsole(int majorColorIndex, int minorColorIndex) {
-    printf("%d | %s | %s\n", majorColorIndex * 5 + minorColorIndex, majorColor[majorColorIndex], minorColor[majorColorIndex]);
+    printf("%d | %s | %s\n", majorColorIndex * 5 + minorColorIndex, majorColor[majorColorIndex], minorColor[minorColorIndex]);
 }
 
 int printColorMap() {
