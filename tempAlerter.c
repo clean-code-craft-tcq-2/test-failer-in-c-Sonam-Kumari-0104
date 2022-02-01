@@ -18,3 +18,12 @@ void alertInCelcius(float farenheit, int (*fnPtrForNetworkAlert)(float)) {
         alertFailureCount +=1;
     }
 }
+
+int main() {
+    test_tempAlertImpl(400.5);
+    test_tempAlertImpl(303.6);
+    test_tempAlertImpl(600);
+    printf("%d alerts failed.\n", alertFailureCount);
+    printf("All is well (maybe!)\n");
+    return 0;
+}
