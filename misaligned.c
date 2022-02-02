@@ -1,15 +1,10 @@
 #include <stdio.h>
 #include <assert.h>
 #include <string.h>
+#include "misaligned.h"
 
 const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
 const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
-
-typedef struct {
-     int pairNumber;
-     char majorColor[8];
-     char minorColor[8];
-}colorPair;
 
 colorPair testPrintcolorMapOnConsole(int pno, const char *majorCol, const char *minorCol) {
      colorPair colorMap;
